@@ -9,3 +9,5 @@ mainClass in (Compile, packageBin) := None
 libraryDependencies += "com.amazonaws" % "aws-java-sdk-dynamodb" % "1.11.160"
 
 libraryDependencies += "org.apache.spark" % "spark-sql_2.11" % "2.1.1"
+
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"

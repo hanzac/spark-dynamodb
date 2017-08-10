@@ -1,4 +1,4 @@
-package com.github.traviscrawford.spark.dynamodb
+package org.apache.spark.dynamodb
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient
 import com.amazonaws.services.dynamodbv2.document.DynamoDB

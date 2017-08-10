@@ -1,4 +1,4 @@
-package com.github.traviscrawford.spark.dynamodb
+package org.apache.spark.dynamodb
 
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers
