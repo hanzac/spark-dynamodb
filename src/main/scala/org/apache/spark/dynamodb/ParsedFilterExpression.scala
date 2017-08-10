@@ -1,4 +1,4 @@
-package com.github.traviscrawford.spark.dynamodb
+package org.apache.spark.dynamodb
 
 /** Simple parser for filter_expression options.
   *

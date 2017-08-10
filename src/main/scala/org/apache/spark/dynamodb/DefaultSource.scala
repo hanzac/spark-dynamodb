@@ -1,4 +1,4 @@
-package com.github.traviscrawford.spark.dynamodb
+package org.apache.spark.dynamodb
 
 import org.apache.spark.sql.SQLContext
 import org.apache.spark.sql.sources.BaseRelation

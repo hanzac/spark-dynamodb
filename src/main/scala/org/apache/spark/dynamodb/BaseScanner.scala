@@ -1,4 +1,4 @@
-package com.github.traviscrawford.spark.dynamodb
+package org.apache.spark.dynamodb
 
 import com.amazonaws.auth.AWSCredentialsProvider
 import com.amazonaws.regions.Region

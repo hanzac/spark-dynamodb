@@ -1,4 +1,4 @@
-package com.github.traviscrawford.spark
+package org.apache.spark
 
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.DataFrameReader
@@ -21,7 +21,7 @@ package object dynamodb {
       */
     def dynamodb(table: String): DataFrame =
       reader
-        .format("com.github.traviscrawford.spark.dynamodb")
+        .format("org.apache.spark.dynamodb")
         .option("table", table)
         .load
 
@@ -40,7 +40,7 @@ package object dynamodb {
       */
     def dynamodb(region: String, table: String): DataFrame =
       reader
-        .format("com.github.traviscrawford.spark.dynamodb")
+        .format("org.apache.spark.dynamodb")
         .option("region", region)
         .option("table", table)
         .load

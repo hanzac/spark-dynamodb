@@ -1,4 +1,4 @@
-package com.github.traviscrawford.spark.dynamodb
+package org.apache.spark.dynamodb
 
 import com.google.common.util.concurrent.RateLimiter
 import org.apache.spark.SparkContext
