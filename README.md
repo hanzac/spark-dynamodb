@@ -1,6 +1,6 @@
 # DynamoDB Data Source for Apache Spark
 
-[![Build Status](https://travis-ci.org/traviscrawford/spark-dynamodb.svg?branch=master)](https://travis-ci.org/traviscrawford/spark-dynamodb)
+# [![Build Status](https://travis-ci.org/hanzac/spark-dynamodb.svg?branch=master)](https://travis-ci.org/hanzac/spark-dynamodb)
 
 This library provides support for reading an [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
 table with [Apache Spark](https://spark.apache.org/).
