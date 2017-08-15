@@ -198,7 +198,8 @@ private[dynamodb] case class DynamoDBRelation(
     val hashKeyRefNum = filters.count(_.references.contains(hashKey))
 
     if (hashKeyRefNum > 0) {
-      if (rangeKey != null) {
+      val rangeCondNum = filters.count(_.references.count(_ != hashKey) > 0)
+      if (rangeKey != null && rangeCondNum > 0) {
         val rangeKeyRefNum = filters.count(_.references.contains(rangeKey))
         if (rangeKeyRefNum > 0)
           true
@@ -232,7 +233,10 @@ private[dynamodb] case class DynamoDBRelation(
 
   override def buildScan(requiredColumns: Array[String], filters: Array[Filter]): RDD[Row] = {
     if (filters != null && filters.length > 0) {
-      val items = sqlContext.sparkContext.parallelize(List(0)).flatMap(
+      val items = sqlContext.sparkContext.parallelize(List(0)
+        /** TODO: Support multiple hash key query in parallel
+          *       Support multiple query by splitting the ranges in parallel
+          */ ).flatMap(
         dummy => {
           val table = getTable(
             tableName = tableName,
